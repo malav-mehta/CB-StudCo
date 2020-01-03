@@ -1,0 +1,82 @@
+/*
+ * MIXINS.SCSS
+ * This file declares SCSS mixins that will be used for overall styling.
+ * These mixins are generalized and created for any web project.
+ * 
+ * Created by Malav Mehta for the Colonel By Secondary School Student Council.
+ * Copyright 2020.
+ */
+
+// Adds browswer specific prefixes for each property that might need specialization.
+@mixin prefixes($property, $value) {
+  #{$property}: $value;
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+}
+
+// Adds all required font properties and corresponding values in one file.
+@mixin font-preset($font-family, $font-size, $font-weight, $color) {
+  @include prefixes(font-family, $font-family);
+  @include prefixes(font-size, $font-size);
+  @include prefixes(font-weight, $font-weight);
+  @include prefixes(color, $color);
+}
+
+// Adds transitions with the inputted speed that works with all prefixes.
+@mixin transition($speed) {
+  @include prefixes(transition, ($speed all ease !important));
+}
+
+// Adds a box shadow with a given intensity and color.
+@mixin box-shadow($intensity, $color) {
+  @include prefixes(
+    box-shadow,
+    (0px 0px (4px * $intensity) (-1px * $intensity) $color !important)
+  );
+}
+
+// Adds an overall border radius.
+@mixin border-radius($radius-in-em) {
+  @include prefixes(border-radius, ($radius-in-em * 0.1em !important));
+}
+
+// Adds PADDING or MARGIN with a specific intensity with a defined multiplier.
+@mixin padding($intensity) {
+  @include prefixes(
+    padding,
+    ((0.75em * $intensity) (2em * $intensity) !important)
+  );
+}
+
+@mixin margin($intensity) {
+  @include prefixes(padding, (15px * $intensity !important));
+}
+
+// Normalizing an input placeholder for different browsers.
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// Removes pre-existing webkit apearances or specializations.
+@mixin remove-webkit {
+  -webkit-appearance: none;
+}

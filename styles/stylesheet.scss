@@ -1,0 +1,14 @@
+/*
+ * STYLESHEET.SCSS
+ * This file imports all the dependencies and fonts required for styling.
+ * This is the overall file that is compiled into the singular STYLESHEET.CSS used for
+ * the overall styling of the project.
+ * 
+ * Created by Malav Mehta for the Colonel By Secondary School Student Council.
+ * Copyright 2020.
+ */
+
+@import "./dependencies/fonts";
+@import "./dependencies/variables";
+@import "./dependencies/mixins";
+@import "./dependencies/_styles.scss";

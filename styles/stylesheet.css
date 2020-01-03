@@ -1,0 +1,1295 @@
+@charset "UTF-8";
+/*
+ * STYLESHEET.SCSS
+ * This file imports all the dependencies and fonts required for styling.
+ * This is the overall file that is compiled into the singular STYLESHEET.CSS used for
+ * the overall styling of the project.
+ * 
+ * Created by Malav Mehta for the Colonel By Secondary School Student Council.
+ * Copyright 2020.
+ */
+/*
+ * FONTS.SCSS
+ * This file imports all the required fonts.
+ * 
+ * Created by Malav Mehta for the Colonel By Secondary School Student Council.
+ * Copyright 2020.
+ */
+@font-face {
+  font-family: "Circular";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/CircularStd-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: "Circular";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/CircularStd-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Circular";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/CircularStd-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Circular";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../assets/fonts//CircularStd-Black.otf") format("opentype");
+}
+/*
+ * MIXINS.SCSS
+ * This file declares SCSS mixins that will be used for overall styling.
+ * These mixins are generalized and created for any web project.
+ * 
+ * Created by Malav Mehta for the Colonel By Secondary School Student Council.
+ * Copyright 2020.
+ */
+/*
+ * STYLES.SCSS
+ * This file declares all styling for the project.
+ * The file requires the other dependencies to already be imported.
+ * 
+ * Created by Malav Mehta for the Colonel By Secondary School Student Council.
+ * Copyright 2020.
+ */
+::selection {
+  background-color: #0000001a;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.navbar-scrolled {
+  margin: 0 !important;
+  padding: 2em 0 1.5em 0;
+  background-color: #fefefe !important;
+  box-shadow: 0px 0px 40px -10px rgba(17, 17, 17, 0.15) !important;
+  -webkit-box-shadow: 0px 0px 40px -10px rgba(17, 17, 17, 0.15) !important;
+  -moz-box-shadow: 0px 0px 40px -10px rgba(17, 17, 17, 0.15) !important;
+  -ms-box-shadow: 0px 0px 40px -10px rgba(17, 17, 17, 0.15) !important;
+}
+.navbar-scrolled .navbar-brand {
+  color: #111111 !important;
+}
+.navbar-scrolled .nav-link {
+  color: #111111 !important;
+}
+.navbar-scrolled .nav-link:after {
+  background-color: #000 !important;
+}
+
+.navbar {
+  background-color: #00000000;
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding-top: 1.8rem;
+  padding: 2em 0 1.5em 0;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+}
+.navbar .navbar-brand {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.2rem;
+  -webkit-font-size: 1.2rem;
+  -moz-font-size: 1.2rem;
+  -ms-font-size: 1.2rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-left: 2rem;
+  z-index: 100;
+}
+.navbar .nav-link {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.1rem;
+  -webkit-font-size: 1.1rem;
+  -moz-font-size: 1.1rem;
+  -ms-font-size: 1.1rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  padding: 0.3em !important;
+  position: relative;
+}
+.navbar .nav-link:active {
+  opacity: 0.7;
+}
+.navbar .links {
+  margin-left: 3.5rem;
+}
+.navbar .actions {
+  margin-right: 3.5rem;
+}
+.navbar .nav-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: -0.2em;
+  background: #fff;
+  height: 0.2rem;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.navbar .nav-link:hover:after,
+.navbar .nav-link:focus:after,
+.navbar .nav-link:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+.navbar .navbar-toggler {
+  z-index: 100;
+  margin-right: 2rem !important;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.1rem;
+  -webkit-font-size: 1.1rem;
+  -moz-font-size: 1.1rem;
+  -ms-font-size: 1.1rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+}
+.navbar #contact {
+  margin-right: 2rem !important;
+}
+
+.navbar-phone {
+  z-index: 75;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+.navbar-phone .nav-link {
+  margin: 0.2rem;
+  font-size: 1.6rem;
+  padding-bottom: 1.4rem;
+}
+.navbar-phone .nav-link:after {
+  opacity: 0;
+}
+
+.header-without-image {
+  height: 70vh !important;
+}
+.header-without-image .header-text h1 {
+  margin-top: 10rem;
+  color: #111111 !important;
+}
+
+.header-with-image {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+.header-with-image .header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.header-with-image .header-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.header-with-image .header-text {
+  margin-left: 7.5rem;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.header-with-image .header-text h1 {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 6.2rem;
+  -webkit-font-size: 6.2rem;
+  -moz-font-size: 6.2rem;
+  -ms-font-size: 6.2rem;
+  font-weight: 700;
+  -webkit-font-weight: 700;
+  -moz-font-weight: 700;
+  -ms-font-weight: 700;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+  line-height: 1.1;
+  max-width: 850px;
+}
+.header-with-image .header-text .actions-wrapper {
+  padding-top: 1.5rem;
+}
+.header-with-image .header-text .btn {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.15rem;
+  -webkit-font-size: 1.15rem;
+  -moz-font-size: 1.15rem;
+  -ms-font-size: 1.15rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+  position: relative;
+  text-align: center;
+  padding: 0.65em 1.4em;
+  border: 0.075em solid #fefefe;
+  border-radius: 0.5em;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+}
+.header-with-image .header-text .btn:hover {
+  padding: 0.65em 2.75em 0.65em 1.4em;
+}
+.header-with-image .header-text .btn:active {
+  opacity: 0.7;
+}
+.header-with-image .header-text .btn:after {
+  content: " →";
+  position: absolute;
+  right: 0.7em;
+  opacity: 0;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+}
+.header-with-image .header-text .btn:hover:after {
+  opacity: 1;
+  right: 1em;
+}
+.header-with-image .header-text .secondary {
+  background-color: rgba(254, 254, 254, 0.125);
+  margin-right: 1rem;
+}
+.header-with-image .header-text .primary {
+  background-color: #fefefe;
+  color: #111111;
+}
+.header-with-image .header-events {
+  height: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fefefe;
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  overflow-x: auto;
+}
+.header-with-image .header-events .upcoming-event {
+  padding-right: 9rem;
+}
+.header-with-image .header-events .upcoming-event:hover .date-label {
+  opacity: 1;
+}
+.header-with-image .header-events .upcoming-event .numeric-label {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1rem;
+  -webkit-font-size: 1rem;
+  -moz-font-size: 1rem;
+  -ms-font-size: 1rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+}
+.header-with-image .header-events .upcoming-event .event-title {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.8rem;
+  -webkit-font-size: 1.8rem;
+  -moz-font-size: 1.8rem;
+  -ms-font-size: 1.8rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  position: relative;
+}
+.header-with-image .header-events .upcoming-event .date-label {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.3rem;
+  -webkit-font-size: 1.3rem;
+  -moz-font-size: 1.3rem;
+  -ms-font-size: 1.3rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  opacity: 0.6;
+}
+.header-with-image .header-events .view-all-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.header-with-image .header-events .view-all-wrapper .view-all {
+  height: 4rem !important;
+  width: 4rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 0.2rem solid #111111;
+  background-color: #111111;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+}
+.header-with-image .header-events .view-all-wrapper .view-all p {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.2rem;
+  -webkit-font-size: 1.2rem;
+  -moz-font-size: 1.2rem;
+  -ms-font-size: 1.2rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+  margin: 0;
+  padding: 0;
+}
+.header-with-image .header-events .view-all-wrapper .view-all:hover {
+  background-color: #00000000;
+}
+.header-with-image .header-events .view-all-wrapper .view-all:hover p {
+  color: #111111;
+}
+.header-with-image .header-events .view-all-wrapper .view-all:active {
+  opacity: 0.75;
+}
+.header-with-image .header-events .view-all-wrapper .view-all-label {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.1rem;
+  -webkit-font-size: 1.1rem;
+  -moz-font-size: 1.1rem;
+  -ms-font-size: 1.1rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+}
+
+.post-container {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.post-container .post-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.post-container .post-date {
+  margin-right: 1.5rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.15rem;
+  -webkit-font-size: 1.15rem;
+  -moz-font-size: 1.15rem;
+  -ms-font-size: 1.15rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  opacity: 0.75;
+}
+.post-container .post-author {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.15rem;
+  -webkit-font-size: 1.15rem;
+  -moz-font-size: 1.15rem;
+  -ms-font-size: 1.15rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  opacity: 0.75;
+}
+.post-container .post-content {
+  margin-top: 1rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.15rem;
+  -webkit-font-size: 1.15rem;
+  -moz-font-size: 1.15rem;
+  -ms-font-size: 1.15rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+}
+
+.event-page-title {
+  margin-bottom: 0 !important;
+}
+
+.content-segment {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.content-segment .subtitle {
+  padding-bottom: 5rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1rem;
+  -webkit-font-size: 1rem;
+  -moz-font-size: 1rem;
+  -ms-font-size: 1rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+}
+.content-segment .article-title {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.9rem;
+  -webkit-font-size: 1.9rem;
+  -moz-font-size: 1.9rem;
+  -ms-font-size: 1.9rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  margin-bottom: 2.5rem;
+}
+.content-segment .main-text {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 2.35rem;
+  -webkit-font-size: 2.35rem;
+  -moz-font-size: 2.35rem;
+  -ms-font-size: 2.35rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  line-height: 1.5;
+}
+.content-segment .position-description {
+  padding: 0.75rem 0rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.15rem;
+  -webkit-font-size: 1.15rem;
+  -moz-font-size: 1.15rem;
+  -ms-font-size: 1.15rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  line-height: 1.6;
+}
+.content-segment .profile-picture {
+  width: 180px;
+  height: 250px;
+  border: 0px solid #00000000;
+  background-color: #f1f1f1;
+  object-fit: cover;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  margin-bottom: 1rem;
+}
+.content-segment .detail-text {
+  padding: 1.5rem 0rem 2rem 0rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.15rem;
+  -webkit-font-size: 1.15rem;
+  -moz-font-size: 1.15rem;
+  -ms-font-size: 1.15rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+.content-segment .links-title {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 0.9rem;
+  -webkit-font-size: 0.9rem;
+  -moz-font-size: 0.9rem;
+  -ms-font-size: 0.9rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding-bottom: 2.5rem;
+  margin: 0 !important;
+}
+.content-segment .links-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content-segment .related-link {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.75rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.9rem;
+  -webkit-font-size: 1.9rem;
+  -moz-font-size: 1.9rem;
+  -ms-font-size: 1.9rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.content-segment .related-link:active {
+  opacity: 0.7;
+}
+.content-segment .related-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: 0;
+  background: #111111;
+  height: 0.2rem;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.content-segment .related-link:hover:after,
+.content-segment .related-link:focus:after,
+.content-segment .related-link:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.position-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.center-button .toggle-position {
+  position: static;
+}
+
+.toggle-position {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3.25rem !important;
+  width: 3.25rem !important;
+  border-radius: 50%;
+  border: 0.2rem solid #111111;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.6rem;
+  -webkit-font-size: 1.6rem;
+  -moz-font-size: 1.6rem;
+  -ms-font-size: 1.6rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  color: #111111;
+  background-color: #00000000;
+}
+.toggle-position:hover {
+  color: #fefefe;
+  background-color: #111111;
+}
+.toggle-position:active {
+  opacity: 0.75;
+}
+
+.toggle-position-active {
+  color: #fefefe;
+  background-color: #111111;
+}
+.toggle-position-active:hover {
+  color: #111111;
+  background-color: #00000000;
+}
+
+.person-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.person-title .person-name {
+  margin-bottom: 0.3rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.05rem;
+  -webkit-font-size: 1.05rem;
+  -moz-font-size: 1.05rem;
+  -ms-font-size: 1.05rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+}
+
+a.email-link {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.05rem;
+  -webkit-font-size: 1.05rem;
+  -moz-font-size: 1.05rem;
+  -ms-font-size: 1.05rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  opacity: 0.6;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.2rem;
+  -webkit-font-size: 1.2rem;
+  -moz-font-size: 1.2rem;
+  -ms-font-size: 1.2rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+a.email-link:active {
+  opacity: 0.7;
+}
+
+a.email-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: 0;
+  background: #111111;
+  height: 0.12rem;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+a.email-link:hover:after,
+a.email-link:focus:after,
+a.email-link:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.images-container:hover .email-link {
+  opacity: 1;
+}
+
+.slideshow-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow {
+  background-color: #111111;
+  width: 90vw;
+  height: 85vh;
+}
+.slideshow .slideshow-image {
+  width: 90vw;
+  height: 85vh;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.slideshow .control {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.1rem;
+  -webkit-font-size: 1.1rem;
+  -moz-font-size: 1.1rem;
+  -ms-font-size: 1.1rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+}
+
+.calendar-container {
+  height: 80vh;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-segment {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.video-segment .video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-segment img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-segment .play-button-wrapper {
+  position: absolute;
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #fefefe;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 48.2%;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+}
+.video-segment .play-button-wrapper .play-button {
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 0.6em 0 0.6em 1.2em;
+  border-radius: 0.2em;
+  border-color: transparent transparent transparent #111111;
+}
+
+.form-input {
+  font-family: "Circular", sans-serif !important;
+  -webkit-font-family: "Circular", sans-serif !important;
+  -moz-font-family: "Circular", sans-serif !important;
+  -ms-font-family: "Circular", sans-serif !important;
+  font-size: 1.2rem !important;
+  -webkit-font-size: 1.2rem !important;
+  -moz-font-size: 1.2rem !important;
+  -ms-font-size: 1.2rem !important;
+  font-weight: 400 !important;
+  -webkit-font-weight: 400 !important;
+  -moz-font-weight: 400 !important;
+  -ms-font-weight: 400 !important;
+  color: #111111 !important;
+  -webkit-color: #111111 !important;
+  -moz-color: #111111 !important;
+  -ms-color: #111111 !important;
+  padding: 1.1rem 0 !important;
+  margin-bottom: 0.5rem !important;
+  border: 0;
+  border-bottom: 0.185rem solid #111111 !important;
+  border-radius: 0;
+  width: 100%;
+}
+.form-input:focus {
+  outline: none !important;
+  outline-color: #fefefe !important;
+}
+
+::placeholder {
+  font-family: "Circular", sans-serif !important;
+  -webkit-font-family: "Circular", sans-serif !important;
+  -moz-font-family: "Circular", sans-serif !important;
+  -ms-font-family: "Circular", sans-serif !important;
+  font-size: 1.2rem !important;
+  -webkit-font-size: 1.2rem !important;
+  -moz-font-size: 1.2rem !important;
+  -ms-font-size: 1.2rem !important;
+  font-weight: 400 !important;
+  -webkit-font-weight: 400 !important;
+  -moz-font-weight: 400 !important;
+  -ms-font-weight: 400 !important;
+  color: #111111 !important;
+  -webkit-color: #111111 !important;
+  -moz-color: #111111 !important;
+  -ms-color: #111111 !important;
+  opacity: 0.4;
+}
+
+.form-submit-button {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 0.9rem;
+  -webkit-font-size: 0.9rem;
+  -moz-font-size: 0.9rem;
+  -ms-font-size: 0.9rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #fefefe;
+  -webkit-color: #fefefe;
+  -moz-color: #fefefe;
+  -ms-color: #fefefe;
+  padding: 1.2rem 2.6rem;
+  margin-top: 1.25rem;
+  margin-right: 0.75rem !important;
+  background-color: #111111;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  border: 0;
+}
+.form-submit-button:hover {
+  color: #fefefe;
+}
+.form-submit-button:active {
+  opacity: 0.85;
+}
+
+.footer {
+  padding: 3rem 0;
+}
+.footer .container-footer {
+  padding: 3rem 0;
+}
+.footer .footer-heading {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.8rem;
+  -webkit-font-size: 1.8rem;
+  -moz-font-size: 1.8rem;
+  -ms-font-size: 1.8rem;
+  font-weight: 600;
+  -webkit-font-weight: 600;
+  -moz-font-weight: 600;
+  -ms-font-weight: 600;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  margin-bottom: 1.4rem;
+}
+.footer .links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer .links-container a {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.2rem;
+  -webkit-font-size: 1.2rem;
+  -moz-font-size: 1.2rem;
+  -ms-font-size: 1.2rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  transition: 0.2s all ease !important;
+  -webkit-transition: 0.2s all ease !important;
+  -moz-transition: 0.2s all ease !important;
+  -ms-transition: 0.2s all ease !important;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.footer .links-container a:active {
+  opacity: 0.7;
+}
+.footer .links-container a:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: 0;
+  background: #111111;
+  height: 0.18rem;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.footer .links-container a:hover:after,
+.footer .links-container a:focus:after,
+.footer .links-container a:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+.footer .footer-information {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.2rem;
+  -webkit-font-size: 1.2rem;
+  -moz-font-size: 1.2rem;
+  -ms-font-size: 1.2rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  margin-bottom: 1rem;
+}
+.footer .footer-information .footer-link {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 1.2rem;
+  -webkit-font-size: 1.2rem;
+  -moz-font-size: 1.2rem;
+  -ms-font-size: 1.2rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111 !important;
+  -webkit-color: #111111 !important;
+  -moz-color: #111111 !important;
+  -ms-color: #111111 !important;
+  text-decoration: underline;
+}
+.footer .footer-information .footer-link:hover {
+  color: black !important;
+}
+.footer .footer-information .footer-link:active {
+  opacity: 0.75;
+}
+
+.input-label {
+  font-family: "Circular", sans-serif;
+  -webkit-font-family: "Circular", sans-serif;
+  -moz-font-family: "Circular", sans-serif;
+  -ms-font-family: "Circular", sans-serif;
+  font-size: 0.95rem;
+  -webkit-font-size: 0.95rem;
+  -moz-font-size: 0.95rem;
+  -ms-font-size: 0.95rem;
+  font-weight: 400;
+  -webkit-font-weight: 400;
+  -moz-font-weight: 400;
+  -ms-font-weight: 400;
+  color: #111111;
+  -webkit-color: #111111;
+  -moz-color: #111111;
+  -ms-color: #111111;
+  padding: 0;
+  margin: 0;
+}
+
+.low-padding {
+  padding-top: 0.5rem !important;
+}
+
+.form-title {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.wireframe {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 150px;
+}
+
+#auth-block {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
