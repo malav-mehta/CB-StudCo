@@ -244,7 +244,7 @@ body {
   -ms-color: #fefefe;
 }
 .navbar #contact {
-  margin-right: 2rem !important;
+  margin-right: 0rem !important;
 }
 
 .navbar-phone {
@@ -400,7 +400,6 @@ body {
   color: #111111;
 }
 .header-with-image .header-events {
-  height: 25%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -408,6 +407,8 @@ body {
   background-color: #fefefe;
   padding-left: 7.5rem;
   padding-right: 7.5rem;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
   overflow-x: auto;
 }
 .header-with-image .header-events .upcoming-event {

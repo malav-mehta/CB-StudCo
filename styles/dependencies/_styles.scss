@@ -140,7 +140,7 @@ body {
   }
 
   #contact {
-    margin-right: 2rem !important;
+    margin-right: 0rem !important;
   }
 }
 
@@ -277,7 +277,6 @@ body {
   }
 
   .header-events {
-    height: 25%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -285,6 +284,8 @@ body {
     background-color: $white;
     padding-left: 7.5rem;
     padding-right: 7.5rem;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
     overflow-x: auto;
 
     .upcoming-event {
