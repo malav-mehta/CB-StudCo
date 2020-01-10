@@ -24,6 +24,11 @@
     <title>Colonel By Student Council</title>
   </head>
   <body>
+    <div class="loading" id="loading-screen">
+      <div class="header-wrapper">
+        <h1>Cb StudCo</h1>
+      </div>
+    </div>
     <nav class="navbar navbar-expand-lg" id="navigation-bar">
       <a class="navbar-brand" :href="brand.route">{{brand.name}}</a>
       <button
@@ -64,7 +69,7 @@
       </div>
     </nav>
 
-    <div class="header-with-image normal-header" id="header">
+    <div class="header-with-image" id="header">
       <img :src="image" class="header-image" />
       <div class="header-content">
         <div class="header-text">

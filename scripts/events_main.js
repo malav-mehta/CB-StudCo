@@ -141,6 +141,7 @@ async function loadHTML() {
   });
 
   document.getElementById("header").scrollIntoView();
+  document.getElementById("loading-screen").classList.add("d-none");
 }
 
 loadHTML();

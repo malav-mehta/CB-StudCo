@@ -29,6 +29,31 @@ body {
   background-color: white;
 }
 
+.loading {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .header-wrapper {
+    padding: 2.5rem;
+    background-color: $white !important;
+
+    h1 {
+      @include font-preset($font-sans, 1.4rem, $bld, $text);
+      text-transform: uppercase;
+      letter-spacing: 0.055em;
+      margin: 0;
+    }
+  }
+}
+
 .navbar-scrolled {
   margin: 0 !important;
   padding: 2em 0 1.5em 0;
@@ -151,6 +176,13 @@ body {
       margin-top: 10rem;
       color: $text !important;
     }
+  }
+}
+
+.normal-header {
+  background-color: $black !important;
+  .header-image {
+    filter: opacity(0.4);
   }
 }
 
@@ -767,7 +799,6 @@ a.email-link:active:after {
     }
   }
 }
-
 
 .input-label {
   @include font-preset($font-sans, 0.95rem, $reg, $text);
