@@ -1,0 +1,416 @@
+{
+  "about_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/RCZpn5B/IMG-9974.jpg",
+    "content_segment1": {
+      "article_title": "What's the Student Council?",
+      "detail1": "Through activities and projects, the student council seeks to promote citizenship, scholarship, leadership, human relations, and cultural values in the interest of augmenting the student body’s experience at Colonel By.",
+      "detail2": "The student council is the hub for your student experience. Every year, the CB StudCo holds hundreds of events: there’s something for everyone! Keep reading to learn more about what events are coming up soon.",
+      "header": "About the Student Council",
+      "key": "Nr. 01",
+      "links": [{
+        "route": "./representatives.html",
+        "title": "Current Representatives"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council is a student-led organization that exists to share the student body's ideas, interests and concerns with teachers. It is also responsible for the planning of school-wide activities, including social events and community projects.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment2": {
+      "article_title": "How can you get involved?",
+      "detail1": "To leave suggestions for upcoming activities, such as spirit weeks, school dances and other events, you can submit a ‘your voice’ form by navigating to the ‘Voice’ page (through the link below) and filling out the form.",
+      "detail2": "If you want to be directly involved with the planning of school-wide activities, you should consider joining the student council. You can run for all of the positions by making an application during either grade representative or executive member elections.",
+      "header": "Get Involved",
+      "key": "Nr. 02",
+      "links": [{
+        "route": "./representatives.html",
+        "title": "Current Representatives"
+      }, {
+        "route": "./voice.html",
+        "title": "Your Voice"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "There is a myriad of ways for you to get involved with the student council. As a member of the student body, you can leave suggestions for the student council activities, and you can also run to be elected as a student council representative.",
+      "page_title": "Colonel By StudCo"
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "slideshow": ["https://i.ibb.co/RctBnNf/IMG-0017.jpg", "https://i.ibb.co/NsWgzPz/IMG-0024.jpg", "https://i.ibb.co/MgJzTtS/IMG-0039.jpg", "https://i.ibb.co/BKn02ky/IMG-0326.jpg", "https://i.ibb.co/VvHJJBb/IMG-0910.jpg"],
+    "title": "About the Student Council"
+  },
+  "contact": [{
+    "email": "mmeht1@ocdsb.ca",
+    "first_name": "Malav",
+    "last_name": "Mehta",
+    "message": "Test test",
+    "subject": "Test"
+  }, {
+    "email": "mmeht1@ocdsb.ca",
+    "first_name": "Malav",
+    "last_name": "Mehta",
+    "message": "Test",
+    "subject": "Test"
+  }],
+  "events_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/94Krk4z/IMG-9346.jpg",
+    "content_segment1": {
+      "article_title": "Upcoming Events and Activities",
+      "calendar_url": "https://www.googleapis.com/calendar/v3/calendars/ocdsb.ca_lavjjef25v724l1l932e1rk2o0@group.calendar.google.com/events?key=AIzaSyD0GYBVFXV3bfMlKHDfIijGreI8kC1EdOg",
+      "header": "Student Council Calendar",
+      "key": "Nr. 01",
+      "last_update": "",
+      "page_title": "Colonel By StudCo"
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "title": "Upcoming Events and Activities"
+  },
+  "home_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "./about.html",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/chvr7jg/landing-page.jpg",
+    "content_segment1": {
+      "article_title": "What's the Student Council?",
+      "detail1": "The student council is the hub of the student experience at Colonel By Secondary School. Each year, the council hosts hundreds of fun and engaging activities: there's something for everyone!",
+      "detail2": "There's a lot you can do to get involved in with the student council! You can run to be a student representative, or you can leave opinions of and suggestions for future activities. Navigate to the representatives or voice page to find out more.",
+      "header": "About the Student Council",
+      "key": "Nr. 01",
+      "links": [{
+        "route": "./about.html",
+        "title": "About the Student Council"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council is the elected student governing body of the school. Students on the council plan, organize and execute school activities, including spirit weeks, caf events and school dances.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment2": {
+      "article_title": "Who's on the Student Council?",
+      "detail1": "The student council is a large committee, composed of either executive representatives (i.e. the co-presidents, the secretary, etc.) or grade reps. Other than the student senator, the members of the student council are elected by the student boy.",
+      "detail2": "If you want to be involved with planning school-wide activities and want to promote school spirit, you should consider joining the student council. You can run for all of the positions by making an application during the election period.",
+      "header": "Student Council Representatives",
+      "key": "Nr. 02",
+      "links": [{
+        "route": "./representatives.html",
+        "title": "Current Representatives"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council consists of a panel of diverse student representatives. These students meet weekly for the ongoing planning of school activities and voice the opinions of the student body.",
+      "page_title": "Colonel By StudCo"
+    },
+    "events": [{
+      "date": "",
+      "title": ""
+    }, {
+      "date": "",
+      "title": ""
+    }, {
+      "date": "",
+      "title": ""
+    }],
+    "side_text": "Colonel By Secondary School's Student Council",
+    "slideshow": ["https://i.ibb.co/Y3Jktq6/AMR3028.jpg", "https://i.ibb.co/bz13Lmw/AMR3273.jpg", "https://i.ibb.co/6NLr6r8/MG-0040.jpg", "https://i.ibb.co/GcTrqZT/MG-0695.jpg", "https://i.ibb.co/mhb8nNC/IMG-0012.jpg"],
+    "title": "Colonel By Student Council",
+    "video_showcase": ""
+  },
+  "navbar": [{
+      "name": "stud co",
+      "route": "./index.html"
+    },
+    [{
+      "name": "Home",
+      "route": "./index.html"
+    }, {
+      "name": "About",
+      "route": "./about.html"
+    }, {
+      "name": "Representatives",
+      "route": "./representatives.html"
+    }, {
+      "name": "Events",
+      "route": "./events.html"
+    }, {
+      "name": "News",
+      "route": "./news.html"
+    }],
+    [{
+      "name": "Voice",
+      "route": "./voice.html"
+    }, {
+      "name": "Contact",
+      "route": "./contact.html"
+    }]
+  ],
+  "news_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/chvr7jg/landing-page.jpg",
+    "content_segment1": {
+      "article_title": "News and Announcements",
+      "header": "Student Council News",
+      "key": "Nr. 01",
+      "page_title": "Colonel By StudCo",
+      "posts": [{
+        "author": "Mr. Baird",
+        "content": "Come to the atrium at lunch for Fun Friday.",
+        "date": "January 10, 2019",
+        "title": "REMINDER: Fun Friday"
+      }]
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "title": "Student Council News"
+  },
+  "representatives_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/MBQ6tC4/IMG-9380.jpg",
+    "content_segment1": {
+      "article_title": "Who's on the Student Council?",
+      "detail1": "There are two primary types of positions on the student council. There are two grade representatives for each grade as well as a combination of a president and vice-president or two co-presidents, public affairs officers, spirit coordinators, a treasurer, a secretary and a student senator.",
+      "detail2": "Together, the student council members are leaders who represent the student body when it comes to making decisions regarding upcoming school-wide events. Any member of the student body is eligible to apply for a student council position. Look out for elections and application announcements on CougarVision.",
+      "header": "Student Council Representatives",
+      "key": "Nr. 01",
+      "links": [{
+        "route": "./about.html",
+        "title": "About the Student Council"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council is a student-led organization, meaning that it is the elected governing body of the school. There are lots of executive positions on the student council, each responsible for a different part of the planning of school-wide activities.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment2": {
+      "article_title": "Want to join the student council?",
+      "detail1": "Executive positions (i.e. presidents, public affairs officers, etc.) are elected a year in advance (2020-2021 executive representatives are elected in the 2019-2020 school year). These representatives have specific executive roles in the student council.",
+      "detail2": "Grade representatives are elected at the beginning of each school year. From each grade, two students become grade representatives for that year. To learn more about each position, scroll down below or ask your questions on the contact page.",
+      "header": "Join the Student Council",
+      "key": "Nr. 02",
+      "links": [{
+        "route": "#03",
+        "title": "Current Representatives"
+      }, {
+        "route": "./voice.html",
+        "title": "Your Voice"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "If you want to be a leader in the student body and are interested in the planning, organizing and execution of school-wide activities, you should consider joining the student council by getting elected for an executive position or as grade rep.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment3": {
+      "article_title": "Who are the StudCo representatives?",
+      "header": "Current StudCo Representatives",
+      "key": "Nr. 03",
+      "page_title": "Colonel By StudCo",
+      "positions": [{
+        "description": "The co-presidents are repsonsible for organizing and coordinating all of the other student council representatives. They manage and the student council and are in charge for the execution of school activities.",
+        "people": [{
+          "email": "nnguy11@ocdsb.ca",
+          "image": "https://",
+          "name": "Nam Nguyen"
+        }, {
+          "email": "tfinl1@ocdsb.ca",
+          "image": "https://",
+          "name": "Tip Finless"
+        }],
+        "title": "Co-presidents"
+      }, {
+        "description": "The vice president aids the co-presidents by helping carry out their responsibilities.",
+        "people": [{
+          "email": "amaxw@ocdsb.ca",
+          "image": "https://",
+          "name": "Abby Maxwell"
+        }],
+        "title": "Vice President"
+      }, {
+        "description": "The student senator is the the school's representative for the OCDSB student senate. The Student Senate meets on a monthly basis, and it is at these meetings where the student senators can report and obtain feedback from other students regarding issues of interest or concern. The Student Senate is the main source of student opinion and is the avenue through which students maintain contact with other students across Ontario.",
+        "people": [{
+          "email": "jliu12@ocdsb.ca",
+          "image": "https://",
+          "name": "Joy Liu"
+        }],
+        "title": "Student Senator"
+      }, {
+        "description": "The secretary of the student council is in charge of organizing the official records and taking notes at meetings. The secretary is respondible for scheduling all appointments and for all correspondence for the student council.",
+        "people": [{
+          "email": "sayac2@ocdsb.ca",
+          "image": "https://",
+          "name": "Sheel Ayachi"
+        }],
+        "title": "Secretary"
+      }, {
+        "description": "The treasurer is in charge of maintaining the student council budget. Fundraising events are managed by the treasurer, who must ensure all funds are used responsibly and in accordance to student council votes and regulations.",
+        "people": [{
+          "email": "nrahm5@ocdsb.ca",
+          "image": "https://",
+          "name": "Neil Rahman"
+        }],
+        "title": "Treasurer"
+      }, {
+        "description": "The public relations officer (PRO) keeps the student body informed of events, fundraisers, and service projects, obtains approval for events from the teachers and principals and is responsible for communication between the school and the student council.",
+        "people": [{
+          "email": "blee6@ocdsb.ca",
+          "image": "https://",
+          "name": "Bryan Lee"
+        }],
+        "title": "Public Relations Officer"
+      }, {
+        "description": "The spirit coordinators collaboratively review suggested spirit days submitted by students and suggested by the student council, report, plan and calendar all school spirit activities and communicate these with the PRO.",
+        "people": [{
+          "email": "mjone3@ocdsb.ca",
+          "image": "https://",
+          "name": "Matthew Jones"
+        }, {
+          "email": "apant3@ocdsb.ca",
+          "image": "https://",
+          "name": "Alexia Pantieras"
+        }, {
+          "email": "anguy28@ocdsb.ca",
+          "image": "https://",
+          "name": "Annie Nguyen"
+        }],
+        "title": "Spirit Coordinators"
+      }, {
+        "description": "CougarVision representatives play a crucial role in the publicity and advertisment of the student council's planned activities and school events. They also student council with filming and video production, such as for school announcements.",
+        "people": [{
+          "email": "myang3@ocdsb.ca",
+          "image": "https://",
+          "name": "Maggie Yang"
+        }, {
+          "email": "ipucc1@ocdsb.ca",
+          "image": "https://",
+          "name": "Isabella Puccini"
+        }],
+        "title": "CougarVision Representatives"
+      }, {
+        "description": "Grade representatives are responsible for raising awareness for grade-specific issue and voicing the opinions of their grades. The grade representatives report back the discussions of the student council to their grade, publicize school activities and attend all events.",
+        "people": [{
+          "email": "jyang24@ocdsb.ca",
+          "image": "https://",
+          "name": "Jeff Yang"
+        }, {
+          "email": "rcian1@ocdsb.ca",
+          "image": "https://",
+          "name": "Riccardo Cianciaruso"
+        }],
+        "title": "Grade 9 Reps"
+      }, {
+        "description": "Grade representatives are responsible for raising awareness for grade-specific issue and voicing the opinions of their grades. The grade representatives report back the discussions of the student council to their grade, publicize school activities and attend all events.",
+        "people": [{
+          "email": "rrodr4@ocdsb.ca",
+          "image": "https://",
+          "name": "Ryan Rodrigs"
+        }, {
+          "email": "afaiz1@ocdsb.ca",
+          "image": "https://",
+          "name": "Ateeb Faizi"
+        }],
+        "title": "Grade 10 Reps"
+      }, {
+        "description": "Grade representatives are responsible for raising awareness for grade-specific issue and voicing the opinions of their grades. The grade representatives report back the discussions of the student council to their grade, publicize school activities and attend all events.",
+        "people": [{
+          "email": "achol1@ocdsb.ca",
+          "image": "https://",
+          "name": "Alexander Cholmsky"
+        }, {
+          "email": "awang12@ocdsb.ca",
+          "image": "https://",
+          "name": "Amy Wang"
+        }],
+        "title": "Grade 11 Reps"
+      }, {
+        "description": "Grade representatives are responsible for raising awareness for grade-specific issue and voicing the opinions of their grades. The grade representatives report back the discussions of the student council to their grade, publicize school activities and attend all events.",
+        "people": [{
+          "email": "abrow10@ocdsb.ca",
+          "image": "https://",
+          "name": "Adam Brown"
+        }, {
+          "email": "aspas1@ocdsb.ca",
+          "image": "https://",
+          "name": "Ana Spasojevic"
+        }],
+        "title": "Grade 12 Reps"
+      }]
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "slideshow1": ["https://i.ibb.co/rHYKh6P/IMG-1169.jpg", "https://i.ibb.co/tBf83Nh/IMG-1763.jpg", "https://i.ibb.co/R4vCk49/IMG-2829.jpg", "https://i.ibb.co/YtRWqdW/IMG-2874.jpg", "https://i.ibb.co/pQN9b5B/IMG-7180.jpg"],
+    "slideshow2": ["https://i.ibb.co/h7cCM2z/IMG-8025.jpg", "https://i.ibb.co/x6mHZY1/IMG-8245.jpg", "https://i.ibb.co/mhSdjpv/IMG-8628.jpg", "https://i.ibb.co/2tYD9NT/IMG-8835.jpg", "https://i.ibb.co/Gv1GtdR/IMG-9323.jpg"],
+    "title": "Student Council Representatives"
+  },
+  "voice": [{
+    "email": "ecups1@ocdsb.ca",
+    "first_name": "Erik",
+    "last_name": "Cupsa",
+    "message": "Your message",
+    "subject": "Subject"
+  }, {
+    "email": "mmeht1@ocdsb.ca",
+    "first_name": "Malav",
+    "last_name": "Mehta",
+    "message": "Test Test",
+    "subject": "Test"
+  }]
+}
