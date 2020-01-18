@@ -1,0 +1,373 @@
+{
+  "about_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/chvr7jg/landing-page.jpg",
+    "content_segment1": {
+      "article_title": "What's the Student Council?",
+      "detail1": "Through activities and projects, the student council seeks to promote citizenship, scholarship, leadership, human relations, cultural and cultural values in the interest of augmenting the student body’s experience at Colonel By.",
+      "detail2": "The student council is the hub for your student experience. Every year, the CB StudCo holds hundreds of events: there’s something for everyone! Keep reading to learn more about what events are coming up soon.",
+      "header": "About the Student Council",
+      "key": "Nr. 01",
+      "links": [{
+        "route": "./representatives.html",
+        "title": "Current Representatives"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council is a student-led organization that exists to share ideas, interests and concerns with teachers. It is responsible for the planning of school-wide activities, including social events and community projects.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment2": {
+      "article_title": "How can you get involved?",
+      "detail1": "To leave suggestions for upcoming activities, such as spirit weeks, school dances and other events, you can submit a the ‘your voice’ form by navigating to the ‘Voice’ page (through the nav link) and filling out the form.",
+      "detail2": "If you want to be directly involved with the planning of school-wide activities, you should consider joining the student council. You can run for all of the positions by making an application during either grade representative or general council elections.",
+      "header": "Get Involved",
+      "key": "Nr. 02",
+      "links": [{
+        "route": "./representatives.html",
+        "title": "Current Representatives"
+      }, {
+        "route": "./voice.html",
+        "title": "Your Voice"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "There are a myriad of ways for you to get involved with the student council. As a member of the student body, you can leave suggestions for the student council activities. You can also run to be elected as a student council representative.",
+      "page_title": "Colonel By StudCo"
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "slideshow": ["https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80", "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80", "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"],
+    "title": "About the Student Council"
+  },
+  "contact": {
+    "2020-01-02,-3-32-41-pm": {
+      "email": "Email",
+      "first_name": "First Name",
+      "last_name": "Last name",
+      "message": "Your message",
+      "subject": "Subject"
+    },
+    "2020-01-02,-3-32-57-pm": {
+      "email": "Subject",
+      "first_name": "Last name",
+      "last_name": "First name",
+      "message": "Email",
+      "subject": "Your message"
+    },
+    "2020-01-02,-3-33-07-pm": {
+      "email": "mmeht1@ocdsb.ca",
+      "first_name": "Malav",
+      "last_name": "Mehta",
+      "message": "Test",
+      "subject": "Test"
+    }
+  },
+  "events_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/chvr7jg/landing-page.jpg",
+    "content_segment1": {
+      "article_title": "Upcoming Events and Activities",
+      "calendar_url": "https://www.googleapis.com/calendar/v3/calendars/ocdsb.ca_lavjjef25v724l1l932e1rk2o0@group.calendar.google.com/events?key=AIzaSyD0GYBVFXV3bfMlKHDfIijGreI8kC1EdOg",
+      "header": "Student Council Calendar",
+      "key": "Nr. 01",
+      "last_update": "",
+      "page_title": "Colonel By StudCo"
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "title": "Upcoming Events"
+  },
+  "home_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "./about.html",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/chvr7jg/landing-page.jpg",
+    "content_segment1": {
+      "article_title": "What's the Student Council?",
+      "detail1": "The student council is the hub for your student experience. Every year, the CB StudCo holds hundreds of events: there’s something for everyone! Keep reading to learn more about what events are coming up soon.",
+      "detail2": "There are many ways for you to get involved with the Student Council. You can run to be a student representative, voice your opinions or leave suggestions for future activities. Click on the representatives or voice page to find out how.",
+      "header": "About the Student Council",
+      "key": "Nr. 01",
+      "links": [{
+        "route": "./about.html",
+        "title": "About the Student Council"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council is the elected governing body of the school. Students on the student council plan, organize and execute school activities, including spirit weeks, caf events and school dances.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment2": {
+      "article_title": "Who's on the Student Council?",
+      "detail1": "The student council is a large executive comittee, generally composed of co-presidents, public affairs officers, spirit coordinators, grade representatives, a treasurer, a student senator and CougarVision representatives.",
+      "detail2": "If you want to be involved with planning school-wide activities, you should consider joining the student council. You can run for all of the positions by making an application during either grade representative or general council elections.",
+      "header": "Student Council Representatives",
+      "key": "Nr. 02",
+      "links": [{
+        "route": "./representatives.html",
+        "title": "Current Representatives"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council is composed of diverse student representatives. The student council meets once a week for the planning and execution of all student-life school activities.",
+      "page_title": "Colonel By StudCo"
+    },
+    "events": [{
+      "date": "",
+      "title": ""
+    }, {
+      "date": "",
+      "title": ""
+    }, {
+      "date": "",
+      "title": ""
+    }],
+    "side_text": "Colonel By Secondary School's Student Council",
+    "slideshow": ["https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80", "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80", "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"],
+    "title": "Colonel By's Student Council",
+    "video_showcase": ""
+  },
+  "navbar": [{
+      "name": "stud co",
+      "route": "./index.html"
+    },
+    [{
+      "name": "Home",
+      "route": "./index.html"
+    }, {
+      "name": "About",
+      "route": "./about.html"
+    }, {
+      "name": "Representatives",
+      "route": "./representatives.html"
+    }, {
+      "name": "Events",
+      "route": "./events.html"
+    }, {
+      "name": "News",
+      "route": "./news.html"
+    }],
+    [{
+      "name": "Voice",
+      "route": "./voice.html"
+    }, {
+      "name": "Contact",
+      "route": "./contact.html"
+    }]
+  ],
+  "news_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/chvr7jg/landing-page.jpg",
+    "content_segment1": {
+      "article_title": "News and Announcements",
+      "header": "Student Council News",
+      "key": "Nr. 01",
+      "page_title": "Colonel By StudCo",
+      "posts": [{
+        "author": "",
+        "content": "",
+        "date": "",
+        "title": ""
+      }, {
+        "author": "",
+        "content": "",
+        "date": "",
+        "title": ""
+      }]
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "title": "Student Council News"
+  },
+  "representatives_page": {
+    "actions": [{
+      "name": "Learn More",
+      "route": "#01",
+      "type": "secondary"
+    }, {
+      "name": "Your Voice",
+      "route": "./voice.html",
+      "type": "primary"
+    }],
+    "background_image": "https://i.ibb.co/chvr7jg/landing-page.jpg",
+    "content_segment1": {
+      "article_title": "Who's on the Student Council?",
+      "detail1": "There are two primary types of positions on the student council. There are two grade representatives for each grade as well as a combination of a president and vice-president or two co-presidents, public affairs officers, spirit coordinators, a treasurer and a student senator.",
+      "detail2": "Together, the student council members are leaders who represent the student body when it comes to making decisions regarding upcoming school-wide events.",
+      "header": "Student Council Representatives",
+      "key": "Nr. 01",
+      "links": [{
+        "route": "./about.html",
+        "title": "About the Student Council"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }, {
+        "route": "./news.html",
+        "title": "Student Council News"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "The student council is a student-led organization, meaning that it is the elected governing body of the school. There are lots of executive positions on the student council, each responsible for a different part of the planning of school-wide activities.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment2": {
+      "article_title": "Want to join the student council?",
+      "detail1": "Executive positions (i.e. presidents, public affairs officers, spirit coordinators and treasurers) are elected a year in advance (2020-2021 executive representatives are elected in the 2019-2020 school year). These representatives have focused roles in the student council.",
+      "detail2": "Grade representatives are elected at the beginning of each school year. From each grade, two students become the year’s grade representatives. To learn more about each position, scroll down below or ask specific questions through the contact page.",
+      "header": "Join the Student Council",
+      "key": "Nr. 02",
+      "links": [{
+        "route": "#03",
+        "title": "Current Representatives"
+      }, {
+        "route": "./voice.html",
+        "title": "Your Voice"
+      }, {
+        "route": "./events.html",
+        "title": "Upcoming Events"
+      }],
+      "links_title": "Find Out More",
+      "main_text": "If you want to be a leader in the student body and are interested in the planning, organizing and execution of school-wide activities, you should consider joining the student council by getting elected for an executive position or as grade rep.",
+      "page_title": "Colonel By StudCo"
+    },
+    "content_segment3": {
+      "article_title": "Who are the representatives?",
+      "header": "Current Representatives",
+      "key": "Nr. 03",
+      "page_title": "Colonel By StudCo",
+      "positions": [{
+        "description": "The co-presidents are responsible for organizing and coordinating all the other student council representatives. The co-presidents are also in charge for the planning of events.",
+        "people": [{
+          "email": "nnugy1@ocdsb.ca",
+          "image": "",
+          "name": "Nam Nugyen"
+        }, {
+          "email": "tfinl1@ocdsb.ca",
+          "image": "",
+          "name": "Tip Finless"
+        }],
+        "title": "Co-presidents"
+      }, {
+        "description": "",
+        "people": [{
+          "email": "",
+          "image": "",
+          "name": ""
+        }],
+        "title": "Secretary"
+      }, {
+        "description": "",
+        "people": [{
+          "email": "",
+          "image": "",
+          "name": ""
+        }],
+        "title": "Treasurer"
+      }, {
+        "description": "",
+        "people": [{
+          "email": "",
+          "image": "",
+          "name": ""
+        }],
+        "title": "Public Affairs Officers"
+      }, {
+        "description": "",
+        "people": [{
+          "email": "",
+          "image": "",
+          "name": ""
+        }],
+        "title": "Spirit Coordinators"
+      }, {
+        "description": "",
+        "people": [{
+          "email": "",
+          "image": "",
+          "name": ""
+        }],
+        "title": "Student Senator"
+      }, {
+        "description": "",
+        "people": [{
+          "email": "",
+          "image": "",
+          "name": ""
+        }],
+        "title": "CougarVision Representatives"
+      }]
+    },
+    "side_text": "Colonel By Secondary School's Student Council",
+    "slideshow1": ["https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80", "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80", "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"],
+    "slideshow2": ["https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80", "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80", "https://images.unsplash.com/photo-1527891751199-7225231a68dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"],
+    "title": "Student Council Representatives"
+  },
+  "voice": {
+    "2020-01-02,-3-31-35-pm": {
+      "email": "mmeht1@ocdsb.ca",
+      "first_name": "Malav",
+      "last_name": "Mehta",
+      "message": "TEST 123 ABC qwertyuioopasdfghjklzxcvbnm,;'!@#$%%^&**()0987654321+_--`",
+      "subject": "Test 1"
+    },
+    "2020-01-02,-3-32-03-pm": {
+      "email": "p3@ocdsb.ca",
+      "first_name": "Person",
+      "last_name": "3",
+      "message": "Test",
+      "subject": "Test 2"
+    },
+    "2020-01-02,-3-32-21-pm": {
+      "email": "person",
+      "first_name": "Person",
+      "last_name": "2",
+      "message": "test",
+      "subject": "test"
+    }
+  }
+}

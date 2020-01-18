@@ -1,1 +1,1158 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" /><link rel="stylesheet" href="styles/stylesheet.css" /><title>Colonel By Student Council</title></head><body><div class="loading" id="loading-screen"><div class="header-wrapper"><h1>Cb StudCo</h1></div></div> <nav class="navbar navbar-expand-lg navbar-scrolled" id="navigation-bar"> <a class="navbar-brand" :href="brand.route">{{brand.name}}</a> <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbarButton()" > Menu </button><div class="collapse navbar-collapse" id="navbarSupportedContent-false"><ul class="navbar-nav m-auto"><li v-for="link in links" class="nav-item active"> <a class="nav-link links" :href="link.route">{{link.name}}</a></li></ul><ul class="navbar-nav ml-auto"><li v-for="action in actions" class="nav-item active"> <a class="nav-link actions" :href="action.route">{{action.name}}</a></li></ul></div><div class="navbar-phone collapse" id="navbarSupportedContent"> <a v-for="link in links" class="nav-link" :href="link.route" >{{link.name}}</a > <a v-for="action in actions" class="nav-link" :href="action.route" >{{action.name}}</a ></div> </nav><div class="header-with-image header-without-image" id="header" > <img :src="image" class="header-image" hidden /><div class="header-content"><div class="header-text"><h1>Administrative Tools</h1></div></div></div><div class="content-segment container-fluid" id="auth-block"><div class="row"><div class="offset-md-1 col"><form id="sign-in"><div class="row"><div class="col"><h3 class="article-title">Authentication</h3></div></div><div class="row form-group"><div class="col"> <label class="input-label">Email</label> <input type="text" class="form-input low-padding" id="email" /></div><div class="col"> <label class="input-label">Password</label> <input type="password" class="form-input low-padding" id="password" /></div><div class="col"> <button type="button" class="form-submit-button btn" onclick="signIn(document.getElementById('email').value, document.getElementById('password').value)" > Sign in </button></div></div></form><div id="sign-out" class="d-none"><h3 class="article-title" style="margin-right: 1rem;"> Signed in.</h3> <button type="button" class="form-submit-button btn" onclick="signOut()" > Sign out </button></div></div></div><div class="row"><div class="offset-md-1 col"> <label class="input-label" style="color: red;" id="sign-in-error" ></label> <label class="input-label" style="color: red;" id="sign-out-error" ></label></div></div></div><div class="content-segment container-fluid d-none" id="content-segment1"><div class="row"><div class="offset-md-1 col-6 col-md-3"><p class="subtitle">Nr. 01</p></div><div class="col-6 col-md-3"><p class="subtitle">Change Content</p></div><div class="col-6 col-md-3 d-none d-md-block"><p class="subtitle">Colonel By StudCo</p></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h3 class="article-title"> Change website content of each page</h3></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h2 class="main-text"> Home Page</h2></div></div><div class="row"><div class="offset-md-1 col-md-5 col-sm-6 col-12"> <img class="wireframe img-fluid" src="assets/images/wireframes/home_page.jpg" /></div><div class="col-md-5 col-sm-6 col-12"><form><div class="row"><div class="col"><h3 class="article-title">Header</h3></div></div><div class="row form-group" id="home-header"><div class="col"> <label class="input-label">Title</label> <input type="text" class="form-input low-padding" v-model="title" id="home-title" /></div><div class="col"> <label class="input-label">Background image</label> <input type="text" class="form-input low-padding" v-model="image" id="home-bg" /></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Textual Segment 1</h3></div></div><div class="row form-group" id="home-content-segment1"><div class="col-6"> <label class="input-label">Header</label> <input type="text" class="form-input low-padding" v-model="header" id="home-cs1-header" /></div><div class="col-6"> <label class="input-label">Article title</label> <input type="text" class="form-input low-padding" v-model="article_title" id="home-cs1-title" /></div><div class="col-12"> <label class="input-label">Large text</label><textarea class="form-input" id="home-cs1-main" rows="4" v-model="main_text" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 1</label><textarea class="form-input" id="home-cs1-detail1" rows="7" v-model="detail1" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 2</label><textarea class="form-input" id="home-cs1-detail2" rows="7" v-model="detail2" ></textarea></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Textual Segment 2</h3></div></div><div class="row form-group" id="home-content-segment2"><div class="col-6"> <label class="input-label">Header</label> <input type="text" class="form-input low-padding" v-model="header" id="home-cs2-header" /></div><div class="col-6"> <label class="input-label">Article title</label> <input type="text" class="form-input low-padding" v-model="article_title" id="home-cs2-title" /></div><div class="col-12"> <label class="input-label">Large text</label><textarea class="form-input" id="home-cs2-main" rows="4" v-model="main_text" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 1</label><textarea class="form-input" id="home-cs2-detail1" rows="7" v-model="detail1" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 2</label><textarea class="form-input" id="home-cs2-detail2" rows="7" v-model="detail2" ></textarea></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Slideshow</h3></div></div><div class="row form-group" id="home-slideshow"><div v-for="(image, index) in images" class="col-6"> <label class="input-label">Image {{index + 1}}</label> <input type="text" class="form-input low-padding" placeholder="Link to image" v-model="image" :id="'home-s1-i' + index" /></div></div></form><button class="form-submit-button btn" onclick="updateHomePage()"> Update </button></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h2 class="main-text" style="margin-top: 1.5rem;"> About Page</h2></div></div><div class="row"><div class="offset-md-1 col-md-5 col-sm-6 col-12"> <img class="wireframe img-fluid" src="assets/images/wireframes/about_page.jpg" /></div><div class="col-md-5 col-sm-6 col-12"><form><div class="row"><div class="col"><h3 class="article-title">Header</h3></div></div><div class="row form-group" id="about-header"><div class="col"> <label class="input-label">Title</label> <input type="text" class="form-input low-padding" v-model="title" id="about-title" /></div><div class="col"> <label class="input-label">Background image</label> <input type="text" class="form-input low-padding" v-model="image" id="about-bg" /></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Textual Segment 1</h3></div></div><div class="row form-group" id="about-content-segment1"><div class="col-6"> <label class="input-label">Header</label> <input type="text" class="form-input low-padding" v-model="header" id="about-cs1-header" /></div><div class="col-6"> <label class="input-label">Article title</label> <input type="text" class="form-input low-padding" v-model="article_title" id="about-cs1-title" /></div><div class="col-12"> <label class="input-label">Large text</label><textarea class="form-input" id="about-cs1-main" rows="4" v-model="main_text" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 1</label><textarea class="form-input" id="about-cs1-detail1" rows="7" v-model="detail1" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 2</label><textarea class="form-input" id="about-cs1-detail2" rows="7" v-model="detail2" ></textarea></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Slideshow</h3></div></div><div class="row form-group" id="about-slideshow"><div v-for="(image, index) in images" class="col-6"> <label class="input-label">Image {{index + 1}}</label> <input type="text" class="form-input low-padding" placeholder="Link to image" v-model="image" :id="'about-s1-i' + index" /></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Textual Segment 2</h3></div></div><div class="row form-group" id="about-content-segment2"><div class="col-6"> <label class="input-label">Header</label> <input type="text" class="form-input low-padding" v-model="header" id="about-cs2-header" /></div><div class="col-6"> <label class="input-label">Article title</label> <input type="text" class="form-input low-padding" v-model="article_title" id="about-cs2-title" /></div><div class="col-12"> <label class="input-label">Large text</label><textarea class="form-input" id="about-cs2-main" rows="4" v-model="main_text" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 1</label><textarea class="form-input" id="about-cs2-detail1" rows="7" v-model="detail1" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 2</label><textarea class="form-input" id="about-cs2-detail2" rows="7" v-model="detail2" ></textarea></div></div></form><button class="form-submit-button btn" onclick="updateAboutPage()"> Update </button></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h3 class="article-title" style="margin-top: 1.5rem;"> Representatives Page</h3></div></div><div class="row"><div class="offset-md-1 col-md-5 col-sm-6 col-12"> <img class="wireframe img-fluid" src="assets/images/wireframes/representatives_page.jpg" /></div><div class="col-md-5 col-sm-6 col-12"><form><div class="row"><div class="col"><h3 class="article-title">Header</h3></div></div><div class="row form-group" id="rep-header"><div class="col"> <label class="input-label">Title</label> <input type="text" class="form-input low-padding" v-model="title" id="rep-title" /></div><div class="col"> <label class="input-label">Background image</label> <input type="text" class="form-input low-padding" v-model="image" id="rep-bg" /></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Textual Segment 1</h3></div></div><div class="row form-group" id="rep-content-segment1"><div class="col-6"> <label class="input-label">Header</label> <input type="text" class="form-input low-padding" v-model="header" id="rep-cs1-header" /></div><div class="col-6"> <label class="input-label">Article title</label> <input type="text" class="form-input low-padding" v-model="article_title" id="rep-cs1-title" /></div><div class="col-12"> <label class="input-label">Large text</label><textarea class="form-input" id="rep-cs1-main" rows="4" v-model="main_text" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 1</label><textarea class="form-input" id="rep-cs1-detail1" rows="7" v-model="detail1" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 2</label><textarea class="form-input" id="rep-cs1-detail2" rows="7" v-model="detail2" ></textarea></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Slideshow 1</h3></div></div><div class="row form-group" id="rep-slideshow1"><div v-for="(image, index) in images" class="col-6"> <label class="input-label">Image {{index + 1}}</label> <input type="text" class="form-input low-padding" placeholder="Link to image" v-model="image" :id="'rep-s1-i' + index" /></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Textual Segment 2</h3></div></div><div class="row form-group" id="rep-content-segment2"><div class="col-6"> <label class="input-label">Header</label> <input type="text" class="form-input low-padding" v-model="header" id="rep-cs2-header" /></div><div class="col-6"> <label class="input-label">Article title</label> <input type="text" class="form-input low-padding" v-model="article_title" id="rep-cs2-title" /></div><div class="col-12"> <label class="input-label">Large text</label><textarea class="form-input" id="rep-cs2-main" rows="4" v-model="main_text" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 1</label><textarea class="form-input" id="rep-cs2-detail1" rows="7" v-model="detail1" ></textarea></div><div class="col-6"> <label class="input-label">Paragraph 2</label><textarea class="form-input" id="rep-cs2-detail2" rows="7" v-model="detail2" ></textarea></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Slideshow 2</h3></div></div><div class="row form-group" id="rep-slideshow2"><div v-for="(image, index) in images" class="col-6"> <label class="input-label">Image {{index + 1}}</label> <input type="text" class="form-input low-padding" placeholder="Link to image" v-model="image" :id="'rep-s2-i' + index" /></div></div><div class="row"><div class="col"><h3 class="article-title form-title">Textual Segment 3</h3></div></div><div class="row form-group" id="rep-content-segment3"><div class="col-6"> <label class="input-label">Header</label> <input type="text" class="form-input low-padding" v-model="header" id="rep-cs3-header" /></div><div class="col-6"> <label class="input-label">Article title</label> <input type="text" class="form-input low-padding" v-model="article_title" id="rep-cs3-title" /></div><div class="col-12"> <label class="input-label" >Positions<br /><b>FORMAT EACH POSITION AS SHOWN:</b ><br />position1 title---position1 description---rep 1--rep1 email--link to rep1 image---rep[n]--rep[n] email--link to rep[n] image----position2 title---position2 description---rep 1--rep1 email--link to rep1 image---rep[n]--rep[n] email--link to rep[n] image----position[n] title---position[n] description---rep 1--rep1 email--link to rep1 image---rep[n]--rep[n] email--link to rep[n] image</label ><textarea class="form-input" id="rep-cs3-positions" rows="4" v-model="breakPositions" ></textarea></div></div></form><button class="form-submit-button btn" onclick="updateRepPage()"> Update </button></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h2 class="main-text" style="margin-top: 1.5rem;"> Events Page</h2></div></div><div class="row"><div class="offset-md-1 col-md-5 col-sm-6 col-12"> <img class="wireframe img-fluid" src="assets/images/wireframes/events_page.jpg" /></div><div class="col-md-5 col-sm-6 col-12"><form><div class="row"><div class="col"><h3 class="article-title">Header</h3></div></div><div class="row form-group" id="events-header"><div class="col"> <label class="input-label">Title</label> <input type="text" class="form-input low-padding" v-model="title" id="events-title" /></div><div class="col"> <label class="input-label">Background image</label> <input type="text" class="form-input low-padding" v-model="image" id="events-bg" /></div></div><div class="row"><div class="col"><h3 class="article-title"> Update the contents of the events page by directly modifying the Student Council Calendar.</h3></div></div></form><button class="form-submit-button btn" onclick="updateEventsPage()"> Update </button></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h2 class="main-text" style="margin-top: 1.5rem;"> News Page</h2></div></div><div class="row"><div class="offset-md-1 col-md-5 col-sm-6 col-12"> <img class="wireframe img-fluid" src="assets/images/wireframes/news_page.jpg" /></div><div class="col-md-5 col-sm-6 col-12"><form id="news-input"><div class="row"><div class="col"><h3 class="article-title"> New post/announcement</h3></div></div><div class="row form-group"><div class="col-12"> <label class="input-label">Title</label> <input type="text" class="form-input" v-model="posts[postIndex].title" id="n-title" /></div><div class="col-6"> <label class="input-label">Date (Month Day, Year)</label> <input type="text" class="form-input" v-model="posts[postIndex].date" id="n-date" /></div><div class="col-6"> <label class="input-label">Author</label> <input type="text" class="form-input" v-model="posts[postIndex].author" id="n-author" /></div></div><div class="row form-group"><div class="col"> <label class="input-label">Text Content</label><textarea class="form-input" id="n-content" rows="7" v-model="posts[postIndex].content" ></textarea></div></div><div class="row form-group"><div class="col"> <button type="button" class="form-submit-button btn" onclick="postNews()" > Post </button> <br /><br /><br /></div></div></form><form id="news-output"><div class="row"><div class="col"><h3 class="article-title"> Posts: {{postIndex+ 1}} out of {{posts.length}}</h3></div></div><div class="row form-group"><div class="col-12"> <label class="input-label">Title</label> <input type="text" class="form-input" v-model="posts[postIndex].title" id="v-first-name" readonly /></div><div class="col-6"> <label class="input-label">Date</label> <input type="text" class="form-input" v-model="posts[postIndex].date" id="v-last-name" readonly /></div><div class="col-6"> <label class="input-label">Author</label> <input type="text" class="form-input" v-model="posts[postIndex].author" id="v-last-name" readonly /></div></div><div class="row form-group"><div class="col"> <label class="input-label">Text Content</label><textarea class="form-input" id="v-comment" rows="7" v-model="posts[postIndex].content" readonly ></textarea></div></div><div class="row form-group"><div class="col"> <button type="button" class="form-submit-button btn" v-on:click="previous" > Previous </button> <button type="button" class="form-submit-button btn" v-on:click="deleteForm" > Delete post </button> <button type="button" class="form-submit-button btn" v-on:click="next" > Next </button></div></div></form></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h2 class="main-text" style="margin-top: 1.5rem;"> Voice Page</h2></div></div><div class="row"><div class="offset-md-1 col-md-5 col-sm-6 col-12"> <img class="wireframe img-fluid" src="assets/images/wireframes/voice_page.jpg" /></div><div class="col-md-5 col-sm-6 col-12"><form id="voice-output"><div class="row"><div class="col"><h3 class="article-title"> Submission: {{formIndex + 1}} out of {{forms.length}}</h3></div></div><div class="row form-group"><div class="col"> <label class="input-label">First name</label> <input type="text" class="form-input" v-model="forms[formIndex].first_name" id="v-first-name" readonly /></div><div class="col"> <label class="input-label">Last name</label> <input type="text" class="form-input" v-model="forms[formIndex].last_name" id="v-last-name" readonly /></div></div><div class="row form-group"><div class="col"> <label class="input-label">Email</label> <input type="text" class="form-input" v-model="forms[formIndex].email" id="v-email" readonly /></div><div class="col"> <label class="input-label">Subject</label> <input type="text" class="form-input" v-model="forms[formIndex].subject" id="v-subject" readonly /></div></div><div class="row form-group"><div class="col"> <label class="input-label">Message</label><textarea class="form-input" id="v-comment" rows="5" v-model="forms[formIndex].message" readonly ></textarea></div></div><div class="row form-group"><div class="col"> <button type="button" class="form-submit-button btn" v-on:click="previous" > Previous </button> <button type="button" class="form-submit-button btn" v-on:click="deleteForm" > Delete submission </button> <button type="button" class="form-submit-button btn" v-on:click="next" > Next </button></div></div></form></div></div><div class="row"><div class="offset-md-1 col-md-10 col-12"><h2 class="main-text" style="margin-top: 1.5rem;"> Contact Page</h2></div></div><div class="row"><div class="offset-md-1 col-md-5 col-sm-6 col-12"> <img class="wireframe img-fluid" src="assets/images/wireframes/contact_page.jpg" /></div><div class="col-md-5 col-sm-6 col-12"><form id="contact-output"><div class="row"><div class="col"><h3 class="article-title"> Submission: {{formIndex + 1}} out of {{forms.length}}</h3></div></div><div class="row form-group"><div class="col"> <label class="input-label">First name</label> <input type="text" class="form-input" v-model="forms[formIndex].first_name" id="v-first-name" readonly /></div><div class="col"> <label class="input-label">Last name</label> <input type="text" class="form-input" v-model="forms[formIndex].last_name" id="v-last-name" readonly /></div></div><div class="row form-group"><div class="col"> <label class="input-label">Email</label> <input type="text" class="form-input" v-model="forms[formIndex].email" id="v-email" readonly /></div><div class="col"> <label class="input-label">Subject</label> <input type="text" class="form-input" v-model="forms[formIndex].subject" id="v-subject" readonly /></div></div><div class="row form-group"><div class="col"> <label class="input-label">Message</label><textarea class="form-input" id="v-comment" rows="5" v-model="forms[formIndex].message" readonly ></textarea></div></div><div class="row form-group"><div class="col"> <button type="button" class="form-submit-button btn" v-on:click="previous" > Previous </button> <button type="button" class="form-submit-button btn" v-on:click="deleteForm" > Delete submission </button> <button type="button" class="form-submit-button btn" v-on:click="next" > Next </button></div></div></form></div></div></div><div class="footer container-fluid" id="footer"><div class="row"><div class="col-12 offset-sm-1 col-sm-5 col-md-3 container-footer"><h3 class="footer-heading">Links</h3><div class="links-container"> <a v-for="link in links" :href="link.route">{{link.name}}</a></div></div><div class="col-12 col-sm-5 col-md-3 container-footer"><h3 class="footer-heading">Actions</h3><div class="links-container"> <a v-for="action in actions" :href="action.route" >{{action.name}}</a ></div></div><div class="col-12 offset-sm-1 offset-md-0 col-sm-11 col-md-4 container-footer" ><h3 class="footer-heading">Regulatory</h3><p class="footer-information"> Copyright &copy; CBStudCo 2020</p><p class="footer-information"> by Malav Mehta | Source Tree on <a class="footer-link" href="malav-mehta-github.io">Github</a></p></div></div></div> <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" ></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" ></script> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" ></script> <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script> <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script> <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script> <script src="scripts/data.js"></script> <script src="scripts/calendar.js"></script> <script src="./scripts/firebase.js"></script> <script src="scripts/admin.js"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+    <title>Colonel By Student Council</title>
+  </head>
+  <body>
+    <div class="loading" id="loading-screen">
+      <div class="header-wrapper"><h1>Cb StudCo</h1></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-scrolled" id="navigation-bar">
+      <a class="navbar-brand" :href="brand.route">{{brand.name}}</a>
+      <button
+        class="navbar-toggler"
+        id="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onclick="toggleNavbarButton()"
+      >
+        Menu
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-false">
+        <ul class="navbar-nav m-auto">
+          <li v-for="link in links" class="nav-item active">
+            <a class="nav-link links" :href="link.route">{{link.name}}</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li v-for="action in actions" class="nav-item active">
+            <a class="nav-link actions" :href="action.route">{{action.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-phone collapse" id="navbarSupportedContent">
+        <a v-for="link in links" class="nav-link" :href="link.route"
+          >{{link.name}}</a
+        >
+        <a v-for="action in actions" class="nav-link" :href="action.route"
+          >{{action.name}}</a
+        >
+      </div>
+    </nav>
+    <div class="header-with-image header-without-image" id="header">
+      <img :src="image" class="header-image" hidden />
+      <div class="header-content">
+        <div class="header-text"><h1>Administrative Tools</h1></div>
+      </div>
+    </div>
+    <div class="content-segment container-fluid" id="auth-block">
+      <div class="row">
+        <div class="offset-md-1 col">
+          <form id="sign-in">
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title">Authentication</h3>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">Email</label>
+                <input type="text" class="form-input low-padding" id="email" />
+              </div>
+              <div class="col">
+                <label class="input-label">Password</label>
+                <input
+                  type="password"
+                  class="form-input low-padding"
+                  id="password"
+                />
+              </div>
+              <div class="col">
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  onclick="signIn(document.getElementById('email').value, document.getElementById('password').value)"
+                >
+                  Sign in
+                </button>
+              </div>
+            </div>
+          </form>
+          <div id="sign-out" class="d-none">
+            <h3 class="article-title" style="margin-right: 1rem;">
+              Signed in.
+            </h3>
+            <button
+              type="button"
+              class="form-submit-button btn"
+              onclick="signOut()"
+            >
+              Sign out
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col">
+          <label
+            class="input-label"
+            style="color: red;"
+            id="sign-in-error"
+          ></label>
+          <label
+            class="input-label"
+            style="color: red;"
+            id="sign-out-error"
+          ></label>
+        </div>
+      </div>
+    </div>
+    <div class="content-segment container-fluid d-none" id="content-segment1">
+      <div class="row">
+        <div class="offset-md-1 col-6 col-md-3">
+          <p class="subtitle">Nr. 01</p>
+        </div>
+        <div class="col-6 col-md-3"><p class="subtitle">Change Content</p></div>
+        <div class="col-6 col-md-3 d-none d-md-block">
+          <p class="subtitle">Colonel By StudCo</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h3 class="article-title">Change website content of each page</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h2 class="main-text">Home Page</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-5 col-sm-6 col-12">
+          <img
+            class="wireframe img-fluid"
+            src="assets/images/wireframes/home_page.jpg"
+          />
+        </div>
+        <div class="col-md-5 col-sm-6 col-12">
+          <form>
+            <div class="row">
+              <div class="col"><h3 class="article-title">Header</h3></div>
+            </div>
+            <div class="row form-group" id="home-header">
+              <div class="col">
+                <label class="input-label">Title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="title"
+                  id="home-title"
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Background image</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="image"
+                  id="home-bg"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Textual Segment 1</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="home-content-segment1">
+              <div class="col-6">
+                <label class="input-label">Header</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="header"
+                  id="home-cs1-header"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Article title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="article_title"
+                  id="home-cs1-title"
+                />
+              </div>
+              <div class="col-12">
+                <label class="input-label">Large text</label
+                ><textarea
+                  class="form-input"
+                  id="home-cs1-main"
+                  rows="4"
+                  v-model="main_text"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 1</label
+                ><textarea
+                  class="form-input"
+                  id="home-cs1-detail1"
+                  rows="7"
+                  v-model="detail1"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 2</label
+                ><textarea
+                  class="form-input"
+                  id="home-cs1-detail2"
+                  rows="7"
+                  v-model="detail2"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Textual Segment 2</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="home-content-segment2">
+              <div class="col-6">
+                <label class="input-label">Header</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="header"
+                  id="home-cs2-header"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Article title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="article_title"
+                  id="home-cs2-title"
+                />
+              </div>
+              <div class="col-12">
+                <label class="input-label">Large text</label
+                ><textarea
+                  class="form-input"
+                  id="home-cs2-main"
+                  rows="4"
+                  v-model="main_text"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 1</label
+                ><textarea
+                  class="form-input"
+                  id="home-cs2-detail1"
+                  rows="7"
+                  v-model="detail1"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 2</label
+                ><textarea
+                  class="form-input"
+                  id="home-cs2-detail2"
+                  rows="7"
+                  v-model="detail2"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Slideshow</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="home-slideshow">
+              <div v-for="(image, index) in images" class="col-6">
+                <label class="input-label">Image {{index + 1}}</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  placeholder="Link to image"
+                  v-model="image"
+                  :id="'home-s1-i' + index"
+                />
+              </div>
+            </div>
+          </form>
+          <button class="form-submit-button btn" onclick="updateHomePage()">
+            Update
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h2 class="main-text" style="margin-top: 1.5rem;">About Page</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-5 col-sm-6 col-12">
+          <img
+            class="wireframe img-fluid"
+            src="assets/images/wireframes/about_page.jpg"
+          />
+        </div>
+        <div class="col-md-5 col-sm-6 col-12">
+          <form>
+            <div class="row">
+              <div class="col"><h3 class="article-title">Header</h3></div>
+            </div>
+            <div class="row form-group" id="about-header">
+              <div class="col">
+                <label class="input-label">Title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="title"
+                  id="about-title"
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Background image</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="image"
+                  id="about-bg"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Textual Segment 1</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="about-content-segment1">
+              <div class="col-6">
+                <label class="input-label">Header</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="header"
+                  id="about-cs1-header"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Article title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="article_title"
+                  id="about-cs1-title"
+                />
+              </div>
+              <div class="col-12">
+                <label class="input-label">Large text</label
+                ><textarea
+                  class="form-input"
+                  id="about-cs1-main"
+                  rows="4"
+                  v-model="main_text"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 1</label
+                ><textarea
+                  class="form-input"
+                  id="about-cs1-detail1"
+                  rows="7"
+                  v-model="detail1"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 2</label
+                ><textarea
+                  class="form-input"
+                  id="about-cs1-detail2"
+                  rows="7"
+                  v-model="detail2"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Slideshow</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="about-slideshow">
+              <div v-for="(image, index) in images" class="col-6">
+                <label class="input-label">Image {{index + 1}}</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  placeholder="Link to image"
+                  v-model="image"
+                  :id="'about-s1-i' + index"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Textual Segment 2</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="about-content-segment2">
+              <div class="col-6">
+                <label class="input-label">Header</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="header"
+                  id="about-cs2-header"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Article title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="article_title"
+                  id="about-cs2-title"
+                />
+              </div>
+              <div class="col-12">
+                <label class="input-label">Large text</label
+                ><textarea
+                  class="form-input"
+                  id="about-cs2-main"
+                  rows="4"
+                  v-model="main_text"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 1</label
+                ><textarea
+                  class="form-input"
+                  id="about-cs2-detail1"
+                  rows="7"
+                  v-model="detail1"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 2</label
+                ><textarea
+                  class="form-input"
+                  id="about-cs2-detail2"
+                  rows="7"
+                  v-model="detail2"
+                ></textarea>
+              </div>
+            </div>
+          </form>
+          <button class="form-submit-button btn" onclick="updateAboutPage()">
+            Update
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h3 class="article-title" style="margin-top: 1.5rem;">
+            Representatives Page
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-5 col-sm-6 col-12">
+          <img
+            class="wireframe img-fluid"
+            src="assets/images/wireframes/representatives_page.jpg"
+          />
+        </div>
+        <div class="col-md-5 col-sm-6 col-12">
+          <form>
+            <div class="row">
+              <div class="col"><h3 class="article-title">Header</h3></div>
+            </div>
+            <div class="row form-group" id="rep-header">
+              <div class="col">
+                <label class="input-label">Title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="title"
+                  id="rep-title"
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Background image</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="image"
+                  id="rep-bg"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Textual Segment 1</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="rep-content-segment1">
+              <div class="col-6">
+                <label class="input-label">Header</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="header"
+                  id="rep-cs1-header"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Article title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="article_title"
+                  id="rep-cs1-title"
+                />
+              </div>
+              <div class="col-12">
+                <label class="input-label">Large text</label
+                ><textarea
+                  class="form-input"
+                  id="rep-cs1-main"
+                  rows="4"
+                  v-model="main_text"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 1</label
+                ><textarea
+                  class="form-input"
+                  id="rep-cs1-detail1"
+                  rows="7"
+                  v-model="detail1"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 2</label
+                ><textarea
+                  class="form-input"
+                  id="rep-cs1-detail2"
+                  rows="7"
+                  v-model="detail2"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Slideshow 1</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="rep-slideshow1">
+              <div v-for="(image, index) in images" class="col-6">
+                <label class="input-label">Image {{index + 1}}</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  placeholder="Link to image"
+                  v-model="image"
+                  :id="'rep-s1-i' + index"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Textual Segment 2</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="rep-content-segment2">
+              <div class="col-6">
+                <label class="input-label">Header</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="header"
+                  id="rep-cs2-header"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Article title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="article_title"
+                  id="rep-cs2-title"
+                />
+              </div>
+              <div class="col-12">
+                <label class="input-label">Large text</label
+                ><textarea
+                  class="form-input"
+                  id="rep-cs2-main"
+                  rows="4"
+                  v-model="main_text"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 1</label
+                ><textarea
+                  class="form-input"
+                  id="rep-cs2-detail1"
+                  rows="7"
+                  v-model="detail1"
+                ></textarea>
+              </div>
+              <div class="col-6">
+                <label class="input-label">Paragraph 2</label
+                ><textarea
+                  class="form-input"
+                  id="rep-cs2-detail2"
+                  rows="7"
+                  v-model="detail2"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Slideshow 2</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="rep-slideshow2">
+              <div v-for="(image, index) in images" class="col-6">
+                <label class="input-label">Image {{index + 1}}</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  placeholder="Link to image"
+                  v-model="image"
+                  :id="'rep-s2-i' + index"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title form-title">Textual Segment 3</h3>
+              </div>
+            </div>
+            <div class="row form-group" id="rep-content-segment3">
+              <div class="col-6">
+                <label class="input-label">Header</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="header"
+                  id="rep-cs3-header"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Article title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="article_title"
+                  id="rep-cs3-title"
+                />
+              </div>
+              <div class="col-12">
+                <label class="input-label"
+                  >Positions<br /><b>FORMAT EACH POSITION AS SHOWN:</b
+                  ><br />position1 title---position1 description---rep 1--rep1
+                  email--link to rep1 image---rep[n]--rep[n] email--link to
+                  rep[n] image----position2 title---position2 description---rep
+                  1--rep1 email--link to rep1 image---rep[n]--rep[n] email--link
+                  to rep[n] image----position[n] title---position[n]
+                  description---rep 1--rep1 email--link to rep1
+                  image---rep[n]--rep[n] email--link to rep[n] image</label
+                ><textarea
+                  class="form-input"
+                  id="rep-cs3-positions"
+                  rows="4"
+                  v-model="breakPositions"
+                ></textarea>
+              </div>
+            </div>
+          </form>
+          <button class="form-submit-button btn" onclick="updateRepPage()">
+            Update
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h2 class="main-text" style="margin-top: 1.5rem;">Events Page</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-5 col-sm-6 col-12">
+          <img
+            class="wireframe img-fluid"
+            src="assets/images/wireframes/events_page.jpg"
+          />
+        </div>
+        <div class="col-md-5 col-sm-6 col-12">
+          <form>
+            <div class="row">
+              <div class="col"><h3 class="article-title">Header</h3></div>
+            </div>
+            <div class="row form-group" id="events-header">
+              <div class="col">
+                <label class="input-label">Title</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="title"
+                  id="events-title"
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Background image</label>
+                <input
+                  type="text"
+                  class="form-input low-padding"
+                  v-model="image"
+                  id="events-bg"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title">
+                  Update the contents of the events page by directly modifying
+                  the Student Council Calendar.
+                </h3>
+              </div>
+            </div>
+          </form>
+          <button class="form-submit-button btn" onclick="updateEventsPage()">
+            Update
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h2 class="main-text" style="margin-top: 1.5rem;">News Page</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-5 col-sm-6 col-12">
+          <img
+            class="wireframe img-fluid"
+            src="assets/images/wireframes/news_page.jpg"
+          />
+        </div>
+        <div class="col-md-5 col-sm-6 col-12">
+          <form id="news-input">
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title">New post/announcement</h3>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-12">
+                <label class="input-label">Title</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="posts[postIndex].title"
+                  id="n-title"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Date (Month Day, Year)</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="posts[postIndex].date"
+                  id="n-date"
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Author</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="posts[postIndex].author"
+                  id="n-author"
+                />
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">Text Content</label
+                ><textarea
+                  class="form-input"
+                  id="n-content"
+                  rows="7"
+                  v-model="posts[postIndex].content"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  onclick="postNews()"
+                >
+                  Post
+                </button>
+                <br /><br /><br />
+              </div>
+            </div>
+          </form>
+          <form id="news-output">
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title">
+                  Posts: {{postIndex+ 1}} out of {{posts.length}}
+                </h3>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col-12">
+                <label class="input-label">Title</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="posts[postIndex].title"
+                  id="v-first-name"
+                  readonly
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Date</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="posts[postIndex].date"
+                  id="v-last-name"
+                  readonly
+                />
+              </div>
+              <div class="col-6">
+                <label class="input-label">Author</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="posts[postIndex].author"
+                  id="v-last-name"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">Text Content</label
+                ><textarea
+                  class="form-input"
+                  id="v-comment"
+                  rows="7"
+                  v-model="posts[postIndex].content"
+                  readonly
+                ></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="previous"
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="deleteForm"
+                >
+                  Delete post
+                </button>
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="next"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h2 class="main-text" style="margin-top: 1.5rem;">Voice Page</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-5 col-sm-6 col-12">
+          <img
+            class="wireframe img-fluid"
+            src="assets/images/wireframes/voice_page.jpg"
+          />
+        </div>
+        <div class="col-md-5 col-sm-6 col-12">
+          <form id="voice-output">
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title">
+                  Submission: {{formIndex + 1}} out of {{forms.length}}
+                </h3>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">First name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].first_name"
+                  id="v-first-name"
+                  readonly
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Last name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].last_name"
+                  id="v-last-name"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">Email</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].email"
+                  id="v-email"
+                  readonly
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].subject"
+                  id="v-subject"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">Message</label
+                ><textarea
+                  class="form-input"
+                  id="v-comment"
+                  rows="5"
+                  v-model="forms[formIndex].message"
+                  readonly
+                ></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="previous"
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="deleteForm"
+                >
+                  Delete submission
+                </button>
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="next"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-10 col-12">
+          <h2 class="main-text" style="margin-top: 1.5rem;">Contact Page</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-md-1 col-md-5 col-sm-6 col-12">
+          <img
+            class="wireframe img-fluid"
+            src="assets/images/wireframes/contact_page.jpg"
+          />
+        </div>
+        <div class="col-md-5 col-sm-6 col-12">
+          <form id="contact-output">
+            <div class="row">
+              <div class="col">
+                <h3 class="article-title">
+                  Submission: {{formIndex + 1}} out of {{forms.length}}
+                </h3>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">First name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].first_name"
+                  id="v-first-name"
+                  readonly
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Last name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].last_name"
+                  id="v-last-name"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">Email</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].email"
+                  id="v-email"
+                  readonly
+                />
+              </div>
+              <div class="col">
+                <label class="input-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  v-model="forms[formIndex].subject"
+                  id="v-subject"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <label class="input-label">Message</label
+                ><textarea
+                  class="form-input"
+                  id="v-comment"
+                  rows="5"
+                  v-model="forms[formIndex].message"
+                  readonly
+                ></textarea>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col">
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="previous"
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="deleteForm"
+                >
+                  Delete submission
+                </button>
+                <button
+                  type="button"
+                  class="form-submit-button btn"
+                  v-on:click="next"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer container-fluid" id="footer">
+      <div class="row">
+        <div class="col-12 offset-sm-1 col-sm-5 col-md-3 container-footer">
+          <h3 class="footer-heading">Links</h3>
+          <div class="links-container">
+            <a v-for="link in links" :href="link.route">{{link.name}}</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 col-md-3 container-footer">
+          <h3 class="footer-heading">Actions</h3>
+          <div class="links-container">
+            <a v-for="action in actions" :href="action.route"
+              >{{action.name}}</a
+            >
+          </div>
+        </div>
+        <div
+          class="col-12 offset-sm-1 offset-md-0 col-sm-11 col-md-4 container-footer"
+        >
+          <h3 class="footer-heading">Regulatory</h3>
+          <p class="footer-information">Copyright &copy; CBStudCo 2020</p>
+          <p class="footer-information">
+            by Malav Mehta | Source Tree on
+            <a class="footer-link" href="malav-mehta-github.io">Github</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/calendar.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="scripts/admin.js"></script>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-let DATA={};
+let DATA = {};
